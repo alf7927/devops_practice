@@ -1,8 +1,16 @@
 ---
-- hosts: 127.0.0.1
+- hosts: localhost
 
+  become: yes
+  become_user: root
   tasks:
+    - name: add unzip package
+      apt:
+        name: unzip
     - name: download the biniary.
       get_url:
         url: https://releases.hashicorp.com/terraform/0.11.9/terraform_0.11.9_linux_amd64.zip
         dest: /tmp/terraform.zip
+    - unarchive:
+       src: /tmp/terraform.zip
+       dest:  /usr/
