@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
+  connection: local
   vars:
     terraform_version: "0.11.9"
   become: yes
