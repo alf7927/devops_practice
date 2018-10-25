@@ -17,3 +17,4 @@
        src: /tmp/terraform{{terraform_version}}.zip
        dest:  /usr/local/bin/
     - pip: name=awscli
+    - pip: name=boto

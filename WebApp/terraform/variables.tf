@@ -1,5 +1,5 @@
 variable "webappami" {
- default ="ami-021702b92d9025550"
+ default ="ami-01e0cf6e025c036e4"
 }
 
 variable "awskey"{

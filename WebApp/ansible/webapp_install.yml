@@ -1,0 +1,11 @@
+---
+- hosts: tag_Purpose_devops
+  vars:
+    terraform_version: "0.11.9"
+    ansible_python_interpreter: /usr/bin/python3
+  become: yes
+  become_user: root
+  tasks:
+    - name: add unzip package
+      apt:
+        name: unzip
