@@ -2,7 +2,7 @@
 - hosts: localhost
   connection: local
   vars:
-    terraform_version: "0.11.9"
+    terraform_version: "0.11.10"
   become: yes
   become_user: root
   tasks:
