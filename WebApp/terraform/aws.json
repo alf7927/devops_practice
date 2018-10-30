@@ -1,0 +1,308 @@
+{
+  "_meta": {
+    "hostvars": {
+      "34.219.8.182": {
+        "ansible_host": "34.219.8.182", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "939159387030", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-07fb098ed1a1c3c24"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-34-219-8-182.us-west-2.compute.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-033b2c76b79e8c21e", 
+        "ec2_image_id": "ami-01e0cf6e025c036e4", 
+        "ec2_instance_profile": "", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "34.219.8.182", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "DEVOPS_Practiace", 
+        "ec2_launch_time": "2018-10-29T05:51:09.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-west-2c", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-5-130.us-west-2.compute.internal", 
+        "ec2_private_ip_address": "172.31.5.130", 
+        "ec2_public_dns_name": "ec2-34-219-8-182.us-west-2.compute.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-west-2", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-0c478527fcada9e0d", 
+        "ec2_security_group_names": "devops_trainning", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-327cb369", 
+        "ec2_tag_Name": "webserver", 
+        "ec2_tag_Purpose": "webserver", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-6f677108"
+      }, 
+      "34.221.3.169": {
+        "ansible_host": "34.221.3.169", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "939159387030", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-0556d6120aa05008b"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-34-221-3-169.us-west-2.compute.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-08596ae618b8ab0e9", 
+        "ec2_image_id": "ami-01e0cf6e025c036e4", 
+        "ec2_instance_profile": "", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "34.221.3.169", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "DEVOPS_Practiace", 
+        "ec2_launch_time": "2018-10-29T05:51:09.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-west-2c", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-5-128.us-west-2.compute.internal", 
+        "ec2_private_ip_address": "172.31.5.128", 
+        "ec2_public_dns_name": "ec2-34-221-3-169.us-west-2.compute.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-west-2", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-0c478527fcada9e0d", 
+        "ec2_security_group_names": "devops_trainning", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-327cb369", 
+        "ec2_tag_Name": "dbserver", 
+        "ec2_tag_Purpose": "dbserver", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-6f677108"
+      }, 
+      "35.164.220.22": {
+        "ansible_host": "35.164.220.22", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "939159387030", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-03e8786ed656e321c"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-35-164-220-22.us-west-2.compute.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-0d433de05c78da649", 
+        "ec2_image_id": "ami-01e0cf6e025c036e4", 
+        "ec2_instance_profile": "", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "35.164.220.22", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "DEVOPS_Practiace", 
+        "ec2_launch_time": "2018-10-29T05:51:09.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-west-2c", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-14-116.us-west-2.compute.internal", 
+        "ec2_private_ip_address": "172.31.14.116", 
+        "ec2_public_dns_name": "ec2-35-164-220-22.us-west-2.compute.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-west-2", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-0c478527fcada9e0d", 
+        "ec2_security_group_names": "devops_trainning", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-327cb369", 
+        "ec2_tag_Name": "webserver", 
+        "ec2_tag_Purpose": "webserver", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-6f677108"
+      }, 
+      "54.190.104.36": {
+        "ansible_host": "54.190.104.36", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "939159387030", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-0cdd11e2c3b4acb8f"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-54-190-104-36.us-west-2.compute.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-026d156c05577b485", 
+        "ec2_image_id": "ami-021702b92d9025550", 
+        "ec2_instance_profile": "", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "54.190.104.36", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "DEVOPS_Practiace", 
+        "ec2_launch_time": "2018-10-25T17:32:49.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-west-2c", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-4-3.us-west-2.compute.internal", 
+        "ec2_private_ip_address": "172.31.4.3", 
+        "ec2_public_dns_name": "ec2-54-190-104-36.us-west-2.compute.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-west-2", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-577a2d2c", 
+        "ec2_security_group_names": "default", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-327cb369", 
+        "ec2_tag_Name": "HelloWorld", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-6f677108"
+      }
+    }
+  }, 
+  "ami_01e0cf6e025c036e4": [
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "ami_021702b92d9025550": [
+    "54.190.104.36"
+  ], 
+  "ec2": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "i-026d156c05577b485": [
+    "54.190.104.36"
+  ], 
+  "i-033b2c76b79e8c21e": [
+    "34.219.8.182"
+  ], 
+  "i-08596ae618b8ab0e9": [
+    "34.221.3.169"
+  ], 
+  "i-0d433de05c78da649": [
+    "35.164.220.22"
+  ], 
+  "key_DEVOPS_Practiace": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "platform_undefined": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "security_group_default": [
+    "54.190.104.36"
+  ], 
+  "security_group_devops_trainning": [
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "tag_Name_HelloWorld": [
+    "54.190.104.36"
+  ], 
+  "tag_Name_dbserver": [
+    "34.221.3.169"
+  ], 
+  "tag_Name_webserver": [
+    "35.164.220.22", 
+    "34.219.8.182"
+  ], 
+  "tag_Purpose_dbserver": [
+    "34.221.3.169"
+  ], 
+  "tag_Purpose_webserver": [
+    "35.164.220.22", 
+    "34.219.8.182"
+  ], 
+  "type_t2_micro": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "us-west-2": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "us-west-2c": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ], 
+  "vpc_id_vpc_6f677108": [
+    "54.190.104.36", 
+    "35.164.220.22", 
+    "34.221.3.169", 
+    "34.219.8.182"
+  ]
+}

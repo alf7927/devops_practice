@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Purpose_devops
+- hosts: tag_Name_webserver:tag_Name_dbserver
   vars:
     ansible_python_interpreter: /usr/bin/python3
   become: yes
@@ -8,3 +8,53 @@
     - name: add unzip package
       apt:
         name: unzip
+    - name: Update and upgrade apt packages
+      become: true
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 86400 #One day
+
+- hosts: tag_Name_webserver
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  become: yes
+  become_user: root
+  tasks:
+    - name: Installs nginx web server
+      apt: pkg=nginx state=installed update_cache=true
+      #notify:
+       # - start nginx
+
+- hosts: tag_Name_dbserver
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    mysql_version: 5.5
+  become: yes
+  become_user: root
+  tasks:
+    - name: Install MySQL
+      action: apt pkg="{{ item }}" state=installed
+      with_items:
+        - mysql-server
+        - mysql-client
+        - python-mysqldb
+      tags : 
+        - mi
+    - name: Start the MySQL service
+      service: name=mysql state=started enabled=yes
+    - apt: name=python3-pip
+    - shell: pip3 install --upgrade pip
+    - apt: name=python3-mysqldb
+    - name: Create deploy user for mysql
+      mysql_user: name="admin" host={{item}} password="" 
+      with_items:
+        - "{{ ansible_hostname }}"
+        - 127.0.0.1
+        - ::1
+        - localhost
+      tags :
+        - cu 
+ # handlers:
+  #  - name: start nginx
+   #   service: name=nginx state=started
