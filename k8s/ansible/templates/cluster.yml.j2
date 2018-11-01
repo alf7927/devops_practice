@@ -1,0 +1,15 @@
+nodes:
+{% for host in servers_for_k8s %}
+    - address: {{ hostvars[host].ec2_private_ip_address }}
+      user: ubuntu
+      role:
+        - controlplane
+        - etcd
+        - worker
+      ssh_key_path: "/home/ubuntu/_ssh_key"
+      port: 22
+
+
+{% endfor %}
+# If set to true, RKE will not fail when unsupported Docker version are found
+ignore_docker_version: true

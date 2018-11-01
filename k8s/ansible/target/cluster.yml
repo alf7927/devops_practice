@@ -1,0 +1,33 @@
+nodes:
+    - address: 172.31.13.53
+      user: ubuntu
+      role:
+        - controlplane
+        - etcd
+        - worker
+      ssh_key_path: "/home/ubuntu/_ssh_key"
+      port: 22
+
+
+    - address: 172.31.4.161
+      user: ubuntu
+      role:
+        - controlplane
+        - etcd
+        - worker
+      ssh_key_path: "/home/ubuntu/_ssh_key"
+      port: 22
+
+
+    - address: 172.31.12.126
+      user: ubuntu
+      role:
+        - controlplane
+        - etcd
+        - worker
+      ssh_key_path: "/home/ubuntu/_ssh_key"
+      port: 22
+
+
+# If set to true, RKE will not fail when unsupported Docker version are found
+ignore_docker_version: true

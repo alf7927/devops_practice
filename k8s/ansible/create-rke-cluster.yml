@@ -1,0 +1,61 @@
+---
+- hosts: localhost
+
+  vars:
+    access_key_path: "{{ lookup('env', 'ACCESS_KEY') }}"
+    servers_for_k8s: "{{ groups['tag_Purpose_rancher_k8s_test'] }}"
+
+  tasks:
+  - file: path=target state=directory
+  - template:
+      src: templates/cluster.yml.j2
+      dest: target/cluster.yml
+
+
+
+- hosts: tag_Purpose_rancher_k8s_test
+
+
+  user: ubuntu
+  become: true
+
+  vars:
+    ansible_ssh_private_key_file: "{{ lookup('env', 'ACCESS_KEY') }}"
+    ansible_python_interpreter: "/usr/bin/python3"
+  tasks:
+#  - apt_repository: repo='deb [arch=amd64] https://download.docker.com/linux/ubuntu cosmic stable' state=absent
+  - name:    Install prerequisites
+    apt:
+      name: ['apt-transport-https','ca-certificates', 'curl','software-properties-common']
+      update_cache: yes
+  - name:    Add Docker GPG key
+    apt_key: url=https://download.docker.com/linux/ubuntu/gpg
+  - name:    Add Docker APT repository
+    apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable
+#      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+  - name:    Install Docker
+    apt:     name=docker-ce
+  - service: name=docker enabled=yes state=started
+  - user: name=ubuntu groups=docker
+
+- hosts: tag_Purpose_jumpbox_k8s_test
+
+  user: ubuntu
+
+  vars:
+    access_key_path: "{{ lookup('env', 'ACCESS_KEY') }}"
+    ansible_ssh_private_key_file: "{{ lookup('env', 'ACCESS_KEY') }}"
+    ansible_python_interpreter: "/usr/bin/python3"
+
+  tasks:
+
+  - copy: src="{{access_key_path}}" dest="/home/ubuntu/_ssh_key"
+  - copy:
+      src: target/cluster.yml
+      dest: /home/ubuntu/cluster.yml
+  - shell: rke up
+  - fetch:
+      src: /home/ubuntu/kube_config_cluster.yml
+      dest: kube_config_cluster.yml
+      flat: yes

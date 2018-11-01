@@ -1,0 +1,19 @@
+---
+- hosts: tag_Purpose_jumpbox_k8s_test
+
+  become: true
+
+  vars:
+    rke_version: "v0.1.11"
+    k8sversion: "v1.12.0"
+    ansible_python_interpreter: "/usr/bin/python3"
+  
+  tasks:
+    - get_url:
+        url: "https://github.com/rancher/rke/releases/download/{{rke_version}}/rke_linux-amd64"
+        dest: /usr/local/bin/rke
+        mode: "a+x"
+    - get_url:
+        url: "https://storage.googleapis.com/kubernetes-release/release/{{k8sversion}}/bin/linux/amd64/kubectl"
+        dest: /usr/local/bin/kubectl
+        mode: "a+x"
