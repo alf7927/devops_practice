@@ -1,8 +1,17 @@
-# deveops_practice
+c# deveops_practice
 ansible-playbook -vv -i ../inventory/ec2.py --user=ubuntu --private-key=$HOME/.ssh/DEVOPS_Practiace.pem webapp_install.yml
-  history | grep tee
+history | grep tee
 ../inventory/ec2.py | tee aws.json
 export ANSIBLE_HOST_KEY_CHECKING=false
 sudo pip install boto
-chmod a+wr devops_practice/*
+chmod a+wr devops_practice/\*
 ssh -i ~/.ssh/DEVOPS_Practiace.pem ubuntu@54.201.36.204
+
+------------------------------------------kbs----------------------------------------------------
+export KUBECONFIG=/mnt/d/DevOps/config/kube_config_cluster_local.yml
+kubectl get nodes
+kubectl proxy &
+kubectl -n kube-system get secrets
+kubectl -n kube-system describe secret deployment-controller-token-hq27x
+
+ssh -L 50000:172.31.13.53:6443 ubuntu@52.38.79.165
