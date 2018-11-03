@@ -21,3 +21,9 @@ chmod a+wr devops_practice/*
 ssh -i ~/.ssh/DEVOPS_Practiace.pem ubuntu@54.201.36.204
 ssh -L 50500:localhost:8001 -i ~/.ssh/DEVOPS_Practiace.pem ubuntu@52.38.79.165
 
+kubectl apply -f k8s/nginx_deployment.yml
+kubectl apply -f k8s/nginx_deployment1.yml
+kubectl apply -f k8s/nginx_service.yml
+kubectl apply -f k8s/nginx_deployment1.yml
+kubectl apply -f k8s/nginx_service1.yml
+kubectl apply -f k8s/nginx_service.yml
